@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> home </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+
+    <section class="sub-header">
+        <nav>
+            <a href="home.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Our Courses</h1>
+    </section>
+
+<!--  courses       -->
+ <section class="course">
+        <h1> Course we offer </h1>
+        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Intermediate</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
+                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                    and scrambled it to make a type specimen book.
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Dgree</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
+                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                    and scrambled it to make a type specimen book.
+                </p>
+            </div>
+            <div class="course-col">
+                <h3>Post</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
+                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                    and scrambled it to make a type specimen book.
+                </p>
+            </div>
+        </div>
+    </section>
+
+<!---------facilities------->
+<section class="facilities">
+    <h1>Our Facilities</h1>
+    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+
+    <div class="row">
+        <div class="facilities-col">
+            <img src="images/library.png">
+            <h3>Library</h3>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type </p>
+        </div>
+        <div class="facilities-col">
+            <img src="images/basketball.png">
+            <h3>Play</h3>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type </p>
+        </div>
+        <div class="facilities-col">
+            <img src="images/cafeteria.png">
+            <h3>Food</h3>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type </p>
+        </div>
+    </div>
+</section>
+
+
+<!--footer-->
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
+            the industry's standard dummy text ever <br>since the 1500s, when an unknown printer took a galley of type </p>
+        <div class="icons">
+            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+            <a href="https://in.linkedin.com/"><i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> by tutorial</p>
+    </section>
+
+
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+
+</body>
+</html>

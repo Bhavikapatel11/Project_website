@@ -1,0 +1,101 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+
+<script>
+    function RegValidation(){
+        var username = document.getElementById("txtName").value;
+        var password = document.getElementById("txtPassword").value;
+
+        var format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var email =document.getElementById("txtEmailID").value;
+
+        var success="";
+
+        if (username == null || username == "")
+        {
+            alert("Username is require!");
+            document.getElementById("txtName").focus();
+            return false;
+        }
+        else if (password.length < 6 || password.length>20 || password == null)
+        {
+            alert("Password is not proper!");
+            document.getElementById("txtPassword").focus();
+            return false;
+        }
+        else if (email == null || email == "" || email == format)
+        {
+            alert("Email is require!");
+            document.getElementById("txtEmailID").focus();
+            return false;
+        }
+        alert("Form is submitted");
+    }
+</script>
+
+</head>
+<body>
+    <section class="log">
+        <nav>
+            <a href="home.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+
+    <div class="login-page">
+    <div class="form">
+        
+        <form class="register-form" onsubmit="return RegValidation()" method="POST">
+            <h1> Registeration </h1>
+            <p>Username</p>
+            <input id="txtName" type="text" name="" placeholder="user name" />
+            <p>Password</p>
+            <input id="txtPassword" type="password" name="" placeholder="password" />
+            <p>EmailID</p>
+            <input id="txtEmailID" type="text" name="" placeholder="email id" />
+            <button type="Submit"> Submit </button>
+            <p class="mess"> Already Registered? <a href="#">Login</a>
+            </p>
+        </form>
+        
+        <form class="login-form">
+            <h1> Login Page </h1>
+            <p>Username</p>
+            <input type="text" placeholder="user name" />
+            <p>Password</p>
+            <input type="password" placeholder="password" />
+            <button> Login </button>
+            <p class="mess"> Not Registered? <a href="#">Register</a>
+            </p>
+        </form>
+        
+    </div>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script>
+        $('.mess a').click(function(){
+            $('form').animate({
+                height:"toggle", 
+                opacity: "toggle"}, "slow");
+        });
+    </script>
+</section>
+</body>
+</html>
